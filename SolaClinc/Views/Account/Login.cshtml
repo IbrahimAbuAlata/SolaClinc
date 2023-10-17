@@ -1,0 +1,35 @@
+﻿@model SolaClinc.Models.ViewModels.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Login</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Login">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="User2Name" class="control-label">Name</label>
+                <input asp-for="User2Name" class="form-control" />
+                <span asp-validation-for="User2Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" />
+                <div>
+                    <a asp-action="Register">I don`t Have Account  </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+

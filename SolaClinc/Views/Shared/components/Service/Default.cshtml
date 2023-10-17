@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Service>
+
+<!-- Services -->
+
+<div class="services">
+	<div class="container">
+		<div class="row">
+			<div class="col text-center">
+				<div class="section_title_container">
+					<div class="section_subtitle">This is SOLA Clinc</div>
+					<div class="section_title"><h2>Our Services</h2></div>
+				</div>
+			</div>
+		</div>
+		<div class="row services_row">
+
+			@foreach (var item in Model)
+			{
+
+				<!-- Service -->
+				<div class="col-xl-4 col-md-6 service_col">
+					<a asp-action="ServiceDetiles" asp-controller="Home" asp-route-id="@item.ServiceId">
+					<div class="service text-center">
+						<div class="service">
+							<div class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+								<div> <img  style="border-radius: 50%;width:163px;height:163px" src="@Url.Content(item.ServiceImg) "></div>
+							</div>
+							<div style="padding-top:52px" class="service_title">@item.ServiceName</div>
+							<div class="service_text">
+								<p>@item.ServiceDescription</p>
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+			}
+
+
+
+
+
+		</div>
+	</div>
+</div>

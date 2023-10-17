@@ -1,0 +1,113 @@
+﻿@model SolaClinc.Models.User
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+			<div class="intro">
+				<div class="container">
+					<div class="row">
+
+						<!-- Intro Content -->
+						<div class="col-lg-6 intro_col">
+							<div class="intro_content">
+								<div class="section_title_container">
+									<div class="section_subtitle">This is SOLA</div>
+									<div class="section_title"><h2>Welcome to our Clinic</h2></div>
+								</div>
+								<div class="intro_text">
+						<p>
+							Removing unwanted hair with the latest technology
+							Treating wrinkles and restoring skin luster with Botox, mesotherapy and stem cell injections.
+							Filling the cheeks and lips with filler injections.
+							Treating skin pigmentation with chemical peeling and mesotherapy.
+							Treating acne and its effects.
+							Face and neck lift
+							Treating various hair problems.
+							Alleviating body cracks.
+							Treating dark circles around the eyes.
+							Treating hyperhidrosis.
+							Special section for skin care:
+							- Diamond peeling
+							- Deep cleaning
+							- Mesotherapy injections to dissolve fat and tighten the body.
+							- Cellulite treatment.
+							- Reduce body circumference.
+						</p>
+								</div>
+								<div class="milestones">
+									<div class="row milestones_row">
+
+										<!-- Milestone -->
+										<div class="col-md-4 milestone_col">
+											<div class="milestone">
+												<div class="milestone_counter" data-end-value="5000" data-sign-before="+">0</div>
+												<div class="milestone_text">Satisfied Patients</div>
+											</div>
+										</div>
+
+										<!-- Milestone -->
+										<div class="col-md-4 milestone_col">
+											<div class="milestone">
+												<div class="milestone_counter" data-end-value="352">0</div>
+												<div class="milestone_text">Face Liftings</div>
+											</div>
+										</div>
+
+										<!-- Milestone -->
+										<div class="col-md-4 milestone_col">
+											<div class="milestone">
+												<div class="milestone_counter" data-end-value="718">0</div>
+												<div class="milestone_text">Injectibles</div>
+											</div>
+										</div>
+
+							<!-- Milestone -->
+							<div class="col-md-4 milestone_col">
+								<div class="milestone">
+									<div class="milestone_counter" data-end-value="900">0</div>
+									<div class="milestone_text">Dimples</div>
+								</div>
+							</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Intro Form -->
+						<div class="col-lg-6 intro_col">
+							<div class="intro_form_container">
+								<div class="intro_form_title">Make an Appointment</div>
+							<form asp-action="Create">
+								<div asp-validation-summary="All" class="text-danger"></div>
+
+									<div class="d-flex flex-row align-items-start justify-content-between flex-wrap">
+									<input type="text" class="intro_input" placeholder="Your Name" asp-for="UserName"> 
+										<input type="email" class="intro_input" placeholder="Your E-mail" asp-for="UserEmail">
+										<input type="tel" class="intro_input" placeholder="Your Phone" asp-for="UserPhone">
+										
+										<input type="text" id="datepicker" class="intro_input datepicker" placeholder="Date" asp-for="Date">
+									</div>
+									<div class="form-group">
+							<input type="submit" value="Book An Appointment" class="btn btn-primary" />
+									</div>
+								</form>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+     
+           
+         
+         
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
